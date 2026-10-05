@@ -5,7 +5,7 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 **Instructions:** To complete this lab, you may work in groups, but you must write your solutions yourself. Choose two of the topics below that you need to review and complete the corresponding problems. Where relevant, you are given the answer and must provide the justification as your solution. Once you have completed the lab, push your changes to your forked repository.
 
 **Topics:** asymptotic analysis, data structures, empirical comparison of algorithms, pseudocode, greedy algorithms. 
-Name: Luke Perezs
+Name: Luke Perez
 
 ## Asymptotic Analysis
 
@@ -61,7 +61,7 @@ Using the rules from lecture, we can drop multiplicative constants meaning that 
 
 **Answer**: Stack
 
-**Justification**: A stack is good for this because if it locates an error, like a parenthesis is wrongly matched with a bracket, then it can go in there and pop from the end which would be the incorrect bracket, and then also push to the end to insert a parenthesis so it is correctly matched. 
+**Justification**: Push each opening parenthesis, bracket, or brace onto the stack. When a closing character appears, compare it with the opening character at the top of the stack and pop it if they match. If they don’t match—or there’s no opening character on the stack—the brackets are incorrectly nested. If anything remains on the stack at the end, there’s an unmatched opening character.
 
 ## Empirical Comparison of Algorithms
 
