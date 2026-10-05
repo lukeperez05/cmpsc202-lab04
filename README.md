@@ -143,4 +143,8 @@ Which of these three strategies guarantees an optimal solution (maximum number o
 
 **Answer**: The earliest finish strategy guarantees an optimal solution.
 
-**Justification**:
+**Justification**: Because you want to screen the maximum number of films possible, you will want films that end earliest because that leaves more time for the others that will be part of the schedule to take up, and the Earliest Finish strategy makes sure of that. 
+
+Shortest First Counter-Example: Films ([0,3]), ([3,6]), and ([2,4]). Shortest First picks ([2,4]), which overlaps both others, so it schedules only 1 film. The optimal schedule is ([0,3]), then ([3,6]): 2 films.
+
+Earliest Start Counter-Example:  Films ([0,10]), ([1,2]), ([2,3]), and ([3,4]). Earliest Start picks ([0,10]), so it schedules only 1 film. The optimal schedule is the three shorter films: 3 films.
