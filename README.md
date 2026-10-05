@@ -111,6 +111,7 @@ for i = 1 to N do
 ```
 
 Write a closed-form expression for the number of times `do_work()` is called in terms of $N$.
+n * n times. One n for each for loop. 
 
 2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
 
@@ -126,7 +127,7 @@ If $N=16$, how many times is `do_work()` called?
 
 **Answer**: 31
 
-**Justification**:
+**Justification**: We start at 16 times, then it is halved to 8 times, then 4 times, then 2, then finally 1. So adding all of those up 16 + 8 + 4 + 2 + 1 = 31 times. 
 
 ## Greedy Algorithms
 
