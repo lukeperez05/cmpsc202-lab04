@@ -76,11 +76,11 @@ Using the rules from lecture, we can drop multiplicative constants meaning that 
 
  **Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
 
-**Justification**:
+**Justification**: Based on the corresponding running times, we can see they consistently increase by a multiplicative of 8 and since we know the values double every time, that is a base of 2. So 2^x = 8, and solving for x we can see that it is 2^3 = 8, or cubic. 
 
  2. Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap? 
 
-**Answer**:
+**Answer**: Just looking at the Big O bound ignores any constant factors, so both algorithms are O(n) but one might be running on better hardware or any implementation factors. 
 
  3. Scenario: To measure the running time of algorithms for an empirical comparison, a developer writes the following benchmarking script:
 
@@ -97,7 +97,7 @@ print("Time:", end - start)
 
 They run this script exactly once for each algorithm on their laptop while streaming a movie in the background. Identify at least three distinct methodological flaws in this benchmarking setup that make the results unreliable.
 
-**Answer**:
+**Answer**: The movie in the background takes up processing power and therefore it is not a complete, accurate running time because the computer is doing 2 things at once. time.time() is not the best timer, time.perf_counter() should be used for a high resolution timer of elapsed time. They only run the script once for each algorithm but a thorough test should be run multiple times to see the exact benchmark. 
 
 ## Pseudocode
 
